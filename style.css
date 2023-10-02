@@ -360,24 +360,18 @@ img {
 }
  .projetos {
   display: flex;
+  flex-basis: 1;
   flex-wrap: wrap;
-  row-gap: 24rem;
+  row-gap: 17rem;
+  column-gap: 4rem;
   max-width: 1300px;
   margin: 0 auto;
 }
 
 
-.Projetos-grupo {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  justify-content: space-between;
-  margin: 20rem auto 8rem auto;
-}
 
 .card {
   margin: 0 auto;
-  gap: 3rem;
   width: 330px;
   height: 213px;
   display: block;
