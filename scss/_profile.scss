@@ -1,0 +1,45 @@
+.sobre-mim{
+    display: flex;
+    flex-direction: column;
+    margin: 24rem auto;
+    max-width: 1300px;
+   
+}
+.sobre-mim-texto{
+    margin: 5rem auto 0 auto;
+    max-width: 50ch;
+    font-size: 1.5rem;
+    color: #ABB2BF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-sobre-mim{
+    display: flex;
+  
+   
+    justify-content: center;
+  
+}
+
+  
+  
+  
+  .copy{
+   
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #ABB2BF;
+    font-family: Poppins;
+    padding: 3rem;
+   
+  }

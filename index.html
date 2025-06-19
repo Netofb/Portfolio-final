@@ -15,18 +15,19 @@
 
 
 <body>
-  
   <header class="header">
+  <button id="languageToggle" class="language-toggle">EN</button>
+
     <a href="#" class="logo"><img src="./img/logo 1.svg" alt=""></a>
     
 
     <nav id="nav" class="nav">
-      <button id="btn-mobile">Menu</button>
+      <button id="btn-mobile" >Menu</button>
       <span id="hamburger"></span>
       <ul class="header-menu" id="menu">
-        <li><a href="#sobre-mim"> Sobre mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#Habilidades">Habilidades</a></li> 
+        <li><a href="#sobre-mim" data-i18n="about">Sobre mim</a></li>
+        <li><a href="#projetos" data-i18n="projects">Projetos</a></li>
+        <li><a href="#Habilidades" data-i18n="skills">Habilidades</a></li> 
        
       </ul>
     </nav>
@@ -39,25 +40,22 @@
     
     <div class="introduction-texto">
         <span class="barra-introduction"></span>
-        <h1 class="introduction-h1">
-          Fábio <span> Design</span>
-          & <br> Desenvolvedor
-          <span>front end.</span> <br>  
-          Localizado em Recife/Pe 🦦
+        <h1 data-i18n="intro" class="introduction-h1">
+          Fábio Design & Desenvolvedorfront end. Localizado em Recife/Pe 🦦
       </h1>
       <img class="hacker" src="./img/hacker.gif" alt="">
     </div>
     <div id="particles-js" class="particles"></div>
   </main>
   <div class="js-scroll">
-    <p class="frase-sh ">Se o caminho para o que você quer, parece muito fácil, então você está no caminho errado.</p>
+    <p data-i18n="phrase" class="frase-sh ">Se o caminho para o que você quer, parece muito fácil, então você está no caminho errado.</p>
    <img src="./img/Union.svg" alt="Frase Motivacional" class="frase-motivacional ">
   </div>
 
 
 
                                         <!-- Projetos -->
-<h1 class="title-projetos efeitos-texto js-scroll" id="projetos">Projetos</h1>
+<h1 class="title-projetos efeitos-texto js-scroll" id="projetos" data-i18n="projects">Projetos</h1>
 
  <section class="projetos js-scroll" id="projetos">
  
@@ -86,7 +84,7 @@
                             <!-- Habilidades -->
 
   <section class="skills js-scroll">
-    <h1 class="title-habilidades efeitos-texto" id="Habilidades">Habilidades</h1>
+    <h1 class="title-habilidades efeitos-texto" id="Habilidades" data-i18n="skills">Habilidades</h1>
 <div class="Habilidades">
 <img src="./img/Simbolos.svg" alt="decoração">
 <article class="caixa">
@@ -112,9 +110,9 @@
 
 
 <section class="js-scroll sobre-mim">
-  <div aria-label="sobre-mim" id="sobre-mim" class="title-sobre-mim efeitos-texto">Sobre mim</span></div>
+  <div aria-label="sobre-mim" id="sobre-mim" class="title-sobre-mim efeitos-texto" data-i18n="about">Sobre mim</span></div>
   
-  <p  class="sobre-mim-texto">Integrante da área da tecnologia, discente na formação acadêmica de ciências da computação, atuo no presente 
+  <p data-i18n="profile"   class="sobre-mim-texto">Integrante da área da tecnologia, discente na formação acadêmica de ciências da computação, atuo no presente 
     momento e detenho das habilidades de Desenvolvimento para Web (Trabalho a três anos como
     Designer Gráfico na criação de templates como banners, convites, cartão de visita, logos e artes em geral e para sublimação na 
     confecção de estamparias, utilizando as ferramentas CorelDraw e Photoshop). Também carrego na minha bagagem de conhecimento e 
@@ -129,13 +127,11 @@
 
 
 
-<p class="copy">© Copyright 2023. Feito por Fábio</p>
+<p data-i18n="copy" class="copy">© Copyright 2025. Feito por Fábio</p>
 
 
-
-  <script src="./script.js"></script>
-  <script src="./particles.js"></script>
-  <script src="./app.js"></script>
+<script src="scrips/script.js"></script>
+<script src="scrips/language-switcher.js"></script>
   
 </body>
 

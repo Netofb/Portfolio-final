@@ -1,0 +1,130 @@
+.introduction {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    width: 100vw;
+    
+  
+  }
+  .introduction-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .barra-introduction{
+    width: 0.7rem;
+    height: 6rem;
+    background-color: #FFB800;
+    margin: 0 20px 0 0;
+    animation-name: barra;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .introduction-h1{
+    color: #ABB2BF;
+    font-family: Poppins;
+    font-size: 38.318px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 25ch;
+    
+  }
+  .introduction-h1 span{
+    color: #FFB800;
+  }
+  
+  
+  
+  .introduction p {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+
+
+
+  .hacker {
+    max-width: 600px;
+    width: 100%;
+  }
+  .frase-sh{
+    margin: 0 auto 0 auto;
+    max-width: 40ch;
+    text-align: center;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+   
+  .frase-motivacional{
+   z-index: -1;
+   margin: -9rem auto 16rem auto;
+  }
+  
+  
+  @keyframes barra{
+   0%{
+    transform: translateY(-30px)
+   }
+   100%{
+    transform: translateY(30px)
+   }
+  }
+  
+  
+  @media (max-width: 1000px) {
+    .introduction h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 800px) {
+    .introduction {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  
+    .introduction h1::before {
+      width: 30px;
+      height: 10px;
+      top: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .introduction {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      height: 50vh;
+    }
+    
+    .introduction img {
+      display: none;
+    }
+    .introduction-texto {
+      margin: 0;
+    }
+    .hacker {
+      display: none;
+    }
+    .introduction h1 {
+      margin: 1rem;
+      font-size: 2rem;
+    }
+    @keyframes type {
+      from {
+        width: 0;
+      }
+      to {
+        width: 10em;
+      }
+    }
+  }
