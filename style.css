@@ -265,12 +265,13 @@
   }
 }
 .title-projetos {
-  margin: 0 auto 6rem auto;
+  margin: 0 auto 15rem auto;
   text-align: center;
   justify-content: center;
 }
 
 .projetos {
+  justify-content: center;
   display: flex;
   flex-basis: 1;
   flex-wrap: wrap;
