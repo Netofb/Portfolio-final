@@ -1,4 +1,4 @@
-   .language-toggle {
+.language-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -27,4 +27,13 @@
 
 .fade-in {
     opacity: 1;
+}
+
+@media (max-width: 800px) {
+    .language-toggle{
+        position: relative;
+        margin: 0 0 0 0.4rem;
+        top: 0px;
+        right: 0px;
+}
 }

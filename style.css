@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600&display=swap");
 .header {
   padding: 40px 20px;
@@ -129,6 +130,7 @@
     visibility: visible;
     overflow-y: auto;
     background-color: #030916;
+    margin-top: -80px;
   }
   #nav.active #hamburger {
     border-top-color: transparent;
@@ -179,10 +181,6 @@
   max-width: 25ch;
 }
 
-.introduction-h1 span {
-  color: #FFB800;
-}
-
 .introduction p {
   font-size: 1.5rem;
   color: #fff;
@@ -194,7 +192,7 @@
 }
 
 .frase-sh {
-  margin: 0 auto 0 auto;
+  margin: 5rem auto 0 auto;
   max-width: 40ch;
   text-align: center;
   color: #FFF;
@@ -220,7 +218,10 @@
 }
 @media (max-width: 1000px) {
   .introduction h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .hacker {
+    max-width: 400px;
   }
 }
 @media (max-width: 800px) {
@@ -228,13 +229,23 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+  .introduction h1 {
+    font-size: 2rem;
+  }
   .introduction h1::before {
     width: 30px;
     height: 10px;
     top: 10px;
   }
+  .frase-sh {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  .frase-motivacional {
+    max-width: 540px;
+  }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .introduction {
     grid-template-columns: 1fr;
     align-items: center;
@@ -254,6 +265,16 @@
   .introduction h1 {
     margin: 1rem;
     font-size: 2rem;
+  }
+  .barra-introduction {
+    margin: 0 10px 0 20px;
+  }
+  .frase-sh {
+    margin-bottom: 5rem;
+    font-size: 0.8rem;
+  }
+  .frase-motivacional {
+    max-width: 340px;
   }
   @keyframes type {
     from {
@@ -283,8 +304,8 @@
 }
 
 .card {
-  width: 300px;
-  height: 455px;
+  width: 500px;
+  height: 300px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -295,12 +316,13 @@
   border-radius: 30px;
 }
 
-.cover-image {
-  width: 100%;
-  height: 400px;
-  border-radius: 5px;
-  -o-object-fit: fill;
-     object-fit: fill;
+.video_card {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 500px;
+  height: 300px;
+  border-radius: 30px;
+  opacity: 0.6;
 }
 
 .wrapper {
@@ -360,14 +382,15 @@
 }
 
 .logo_card {
-  width: 50%;
+  width: 30%;
   transition: transform 0.5s;
   position: absolute;
-  bottom: 60px;
+  bottom: 30px;
+  opacity: 0.4;
 }
 
 .card:hover .logo_card {
-  opacity: 0.2;
+  opacity: 0.1;
   transform: translate3d(0%, -50px, 80px);
 }
 
@@ -376,7 +399,7 @@
 }
 
 .character {
-  width: 70%;
+  width: 40%;
   opacity: 0;
   transition: all 0.8s;
   filter: drop-shadow(2px 2px 2px #000);
@@ -400,45 +423,91 @@
   justify-content: center;
 }
 
-.Habilidades {
-  max-width: 1000px;
+:root {
+  --carrossel-height: 100px;
+  --logo-max-width: 160px;
+  --animation-duration: 40s;
+}
+
+.carrossel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+  margin: 3rem 0;
+}
+
+/* Gradiente nas bordas para suavizar */
+.carrossel-wrapper::before,
+.carrossel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carrossel-container {
   display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+  /* Otimização de performance */
 }
 
-.habilidades-card {
-  width: 198px;
-  height: 100px;
-  border: 1px solid #abb2bf;
+.carrossel-group {
+  display: flex;
+  animation: scroll var(--animation-duration) linear infinite;
 }
 
-.habilidades-card h1 {
-  color: #fff;
-  font-family: Fira Code;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  border-bottom: 1px solid #abb2bf;
-  padding: 8px 9px;
+.logo-item {
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  flex-shrink: 0;
 }
 
-.habilidades-card h3 {
-  color: #abb2bf;
-  font-family: Fira Code;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-  display: inline-flex;
-  padding: 4px;
-  flex-direction: column;
-  align-items: flex-start;
+.logo-item img {
+  height: auto;
+  max-height: var(--carrossel-height);
+  max-width: var(--logo-max-width);
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(100%) opacity(0.75);
+  transition: all 0.3s ease;
 }
 
+.logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  :root {
+    --carrossel-height: 80px;
+    --logo-max-width: 120px;
+    --animation-duration: 30s;
+  }
+  .carrossel-wrapper::before,
+  .carrossel-wrapper::after {
+    width: 50px;
+  }
+  .logo-item {
+    padding: 0 1.5rem;
+  }
+}
 .sobre-mim {
   display: flex;
   flex-direction: column;
@@ -508,6 +577,14 @@
   opacity: 1;
 }
 
+@media (max-width: 800px) {
+  .language-toggle {
+    position: relative;
+    margin: 0 0 0 0.4rem;
+    top: 0px;
+    right: 0px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -527,11 +604,8 @@ html {
 }
 
 .efeitos-texto {
+  color: #ABB2BF;
   line-height: 1.3;
-  background: linear-gradient(180deg, #cbe5f7 0%, #496ebf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   position: relative;
   font-weight: bold;
@@ -556,13 +630,6 @@ img {
   max-width: 4ch;
 }
 
-@media (max-width: 800px) {
-  .subtitulo {
-    font-size: 3rem;
-    text-transform: capitalize;
-    max-width: initial !important;
-  }
-}
 .js-scroll {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
@@ -572,49 +639,4 @@ img {
 .js-scroll.ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-}
-
-@media (max-width: 700px) {
-  .Habilidades img {
-    display: none;
-  }
-  .Habilidades {
-    justify-content: center;
-  }
-  .efeitos-texto {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .sobre-mim-texto {
-    font-size: 1rem;
-  }
-  .frase-motivacional {
-    max-width: 500px;
-    margin-top: -6rem;
-  }
-  .frase-sh {
-    font-size: 1rem;
-    margin-top: 5rem;
-  }
-  .hacker {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  .sobre-mim-texto {
-    font-size: 0.4rem;
-  }
-  .frase-motivacional {
-    max-width: 400px;
-    margin-top: -5rem;
-  }
-  .frase-sh {
-    font-size: 1rem;
-    margin-top: 5rem;
-  }
-  .hacker {
-    display: none;
-  }
 }/*# sourceMappingURL=style.css.map */

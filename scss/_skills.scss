@@ -1,47 +1,104 @@
-.skills{
-  margin: 30rem auto 0 auto ;
+.skills {
+  margin: 30rem auto 0 auto;
   max-width: 1300px;
   flex-wrap: wrap;
 }
-.title-habilidades{
+
+.title-habilidades {
 
   margin-bottom: 8rem;
   justify-content: center;
 }
 
-.Habilidades {
-  max-width: 1000px;
+:root {
+  --carrossel-height: 100px;
+  --logo-max-width: 160px;
+  --animation-duration: 40s;
+}
+
+
+.carrossel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+  margin: 3rem 0;
+}
+
+/* Gradiente nas bordas para suavizar */
+.carrossel-wrapper::before,
+.carrossel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+.carrossel-container {
   display: flex;
-  margin: 0 auto ;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: max-content;
+  will-change: transform;
+  /* Otimização de performance */
 }
-.habilidades-card {
-  width: 198px;
-  height: 100px;
-  border: 1px  solid #abb2bf;
- 
+
+.carrossel-group {
+  display: flex;
+  animation: scroll var(--animation-duration) linear infinite;
 }
-.habilidades-card h1 {
-  color: #fff;
-  font-family: Fira Code;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  border-bottom: 1px solid #abb2bf;
-  padding: 8px 9px ;
+
+
+
+.logo-item {
+  display: grid;
+  place-items: center;
+  padding: 0 2rem;
+  flex-shrink: 0;
 }
-.habilidades-card h3 {
-  color: #abb2bf;
-  font-family: Fira Code;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-  display: inline-flex;
-  padding: 4px;
-  flex-direction: column;
-  align-items: flex-start;
+
+.logo-item img {
+  height: auto;
+  max-height: var(--carrossel-height);
+  max-width: var(--logo-max-width);
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.75);
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  :root {
+    --carrossel-height: 80px;
+    --logo-max-width: 120px;
+    --animation-duration: 30s;
+  }
+
+  .carrossel-wrapper::before,
+  .carrossel-wrapper::after {
+    width: 50px;
+  }
+
+  .logo-item {
+    padding: 0 1.5rem;
+  }
 }

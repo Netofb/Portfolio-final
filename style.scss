@@ -27,11 +27,8 @@ html{
 }
 
 .efeitos-texto{
+  color: #ABB2BF;
   line-height: 1.3;
-  background: linear-gradient(180deg, #cbe5f7 0%, #496ebf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   position: relative;
   font-weight: bold;
@@ -54,13 +51,7 @@ img {
   word-break: break-all;
   max-width: 4ch;
 }
-@media(max-width:800px){
-  .subtitulo {
-    font-size: 3rem;
-    text-transform: capitalize;
-    max-width: initial !important;
-  }
-}
+
 
 .js-scroll {
   opacity: 0;
@@ -72,49 +63,4 @@ img {
   transform: translate3d(0, 0, 0);
 }
 
-@media (max-width: 700px) {
-  .Habilidades img{
-    display: none;
-  }
-  .Habilidades{
-    justify-content: center;
-  }
-  .efeitos-texto{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .sobre-mim-texto {
-    font-size: 1rem;
-  }
-  .frase-motivacional{
-    max-width: 500px;
-    margin-top: -6rem;
-  }
-  .frase-sh{
-    font-size: 1rem;
-    margin-top: 5rem;
-  }
-  .hacker{
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  
- 
-  .sobre-mim-texto {
-    font-size: 0.4rem;
-  }
-  .frase-motivacional{
-    max-width: 400px;
-    margin-top: -5rem;
-  }
-  .frase-sh{
-    font-size: 1rem;
-    margin-top: 5rem;
-  }
-  .hacker{
-    display: none;
-  }
-}
+
