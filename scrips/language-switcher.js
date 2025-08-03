@@ -7,9 +7,9 @@ const translations = {
         intro: "Fábio design & Desenvolvedor front end. Localizado em Recife/Pe 🦦",
         phrase:"Se o caminho para o que você quer, parece muito fácil, então você está no caminho errado.",
         copy: "© Copyright 2025. Feito por Fábio.",
-        profile:"Integrante da área da tecnologia, discente na formação acadêmica de ciências da computação, atuo no presente momento e detenho das habilidades de Desenvolvimento para Web (Trabalho a três anos comoDesigner Gráfico na criação de templates como banners, convites, cartão de visita, logos e artes em geral e para sublimação na confecção de estamparias, utilizando as ferramentas CorelDraw e Photoshop). Também carrego na minha bagagem de conhecimento e trabalho, proatividade, dinamismo, relacionamento interpessoal assim tendo como proposta o partilhamento de conhecimentos foco na busca do aprendizado contínuo educacional.",
+        profile:"Sou um profissional de TI em transição para Desenvolvimento Full-Stack, combinando experiência em suporte técnico com habilidades sólidas em programação. Minha jornada na área me ensinou a resolver problemas de forma criativa e eficiente, e agora estou direcionando essa capacidade para construir soluções robustas por meio do código. Tenho conhecimentos em: Front-end: React, JavaScript, Sass, Tailwind CSS e Bootstrap Back-end: PHP e Python para lógica e integrações Banco de dados: PostgreSQL, MongoDB e SQLite Além disso, me mantenho em constante aprendizado, explorando novas tecnologias e frameworks para expandir meu conhecimento e entregar projetos cada vez mais eficientes.",
         
-    },
+        },
     en: {
         
         about:"About me",
@@ -18,7 +18,7 @@ const translations = {
         intro: "Fábio design & Developer frontend. Located in Recife/Pe 🦦",
         phrase:"If the path to what you want seems too easy, then you are on the wrong path.",
         copy: "© Copyright 2025. Made by Fábio.",
-        profile:"I am a member of the technology area, a student of computer science, and I am currently working and have web development skills (I have worked for three years as a graphic designer creating templates such as banners, invitations, business cards, logos and art in general, and for sublimation in the production of prints, using CorelDraw and Photoshop tools). I also have in my knowledge and work experience, proactivity, dynamism, interpersonal relationships, and my goal is to share knowledge and focus on the pursuit of continuous educational learning.",
+        profile:"I'm an IT professional transitioning into Full-Stack Development, combining my technical support experience with solid programming skills. My journey in this field has taught me to solve problems creatively and efficiently, and I'm now focusing this ability on building robust solutions through code. My skills include: Front-end: React, JavaScript, Sass, Tailwind CSS and Bootstrap; Back-end: PHP and Python for logic and integrations; Databases: PostgreSQL, MongoDB and SQLite. Additionally, I'm constantly learning, exploring new technologies and frameworks to expand my knowledge and deliver increasingly efficient projects.",
         
     }
 };
